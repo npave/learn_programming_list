@@ -1,34 +1,25 @@
-# *Learn programming*
+# Learn programming
 
+![Screenshot](images/learn-programming.png)
 
+This is a website that lists several resources that could help to improve your skills as a software developer. 
 
-'''
-This is a website that list several resources that could
-help to improve your skills as software developer. 
-'''
-
-##Features
+### Features
 
 - Written in Python 2.7
 - Easy to use
 - Works with Windows
 
 
-##How to use this code
+### How to use this code
 
 This project consist of three files:
 
-''' - resources_center.py, this file has all the information of the website: 
-name, description, languages, technologies and url of each resources 
-that shows in the website.
-'''
+- resources_center.py, this file has all the information of the website:  name, description, languages, technologies and url of each learning resource.
 
-'''- data_structure.py, here is define a class that contain the data structure of 
-each resource.
+- data_structure.py, here is defined a class that contain the data structure of each resource.
 
-'''
+- fun_list.py, this module takes the information of all resources,  adds style and creates a web page. 
 
-'''- fun_list.py, this module take the information of all resources,
- add style and create a website. 
 
-'''
+![Deployment diagram](images/Resource-website-diagrams.svg)

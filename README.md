@@ -22,4 +22,4 @@ This project consist of three files:
 - fun_list.py, this module takes the information of all resources,  adds style and creates a web page. 
 
 
-![Deployment diagram](images/Resource-website-diagrams.svg)
+![Deployment diagram](images/Resource-website-digrams.png)

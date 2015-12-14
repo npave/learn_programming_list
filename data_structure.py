@@ -1,3 +1,4 @@
+# Class to define the structure the resource
 class Resource():
     def __init__(self, name, description, style, technologies,language, url):
         self.name         = name

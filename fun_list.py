@@ -78,6 +78,7 @@ main_page_head = '''
     </head>
 '''
 
+#The main page layout and title  bar
 main_page_content='''
 <body>
     <div class="container">
@@ -93,7 +94,7 @@ main_page_content='''
 </body>
 </html>
 '''
-
+# A single resource entry html template
 resource_row = '''
     <div class="one-resource">
         <div class="left-row">
@@ -115,8 +116,10 @@ resource_row = '''
 
 
 def create_resources_content(resources):
+	# The HTML content for this section of the page
     content=''
     for resource in resources:
+	# Append the title for the resource with its content filled in
         content                 += resource_row.format(
         resource_title          = resource.name,
         resource_information    = resource.description,
@@ -129,10 +132,13 @@ def create_resources_content(resources):
     
 
 def open_resources_page(resources):
+	# Create or overwrite the output file
     output_file = open('learn_programming.html','w')
+
+	# Replace the resource titles place holder generated content
     rendered_content = main_page_content.format(
         resource_row = create_resources_content(resources))
-    
-    output_file.write(main_page_head + rendered_content)
 
+	# Output the file
+    output_file.write(main_page_head + rendered_content)
     output_file.close()

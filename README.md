@@ -22,4 +22,9 @@ This project consist of three files:
 - fun_list.py, this module takes the information of all resources,  adds style and creates a web page. 
 
 
-![Deployment diagram](images/Resource-website-diagrams.svg)
+![Deployment diagram](images/Resource-website-digrams.png)
+
+### How to run project
+
+The main file of this project is _resources_center.py_. To run this project you need to launch a terminal Windows (command prompt for Windows users) and then navigate to the project directory. From there you can run the command _python resources_center.py_ and that will execute the code within the python file. 
+'''

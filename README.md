@@ -11,7 +11,7 @@ This is a website that lists several resources that could help to improve your s
 - Works with Windows
 
 
-### How to use this code
+### Project structure
 
 This project consist of three files:
 
@@ -24,7 +24,8 @@ This project consist of three files:
 
 ![Deployment diagram](images/Resource-website-digrams.png)
 
-### How to run project
+### How to use this code
 
-The main file of this project is _resources_center.py_. To run this project you need to launch a terminal Windows (command prompt for Windows users) and then navigate to the project directory. From there you can run the command _python resources_center.py_ and that will execute the code within the python file. 
-'''
+The main file of this project is _resources_center.py_.
+ 
+To run this project you need to open a terminal and then navigate to the project directory. From there you can run the command `python resources_center.py` this will generate the file _learning\_programming.html_ that you can open in your browser to see all the resources. 

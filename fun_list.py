@@ -1,9 +1,8 @@
 import webbrowser
 
 
-#styles and scripting for the page
-
-main_page_head = '''
+# Styles and scripting for the page.
+main_page_head = """
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -76,26 +75,27 @@ main_page_head = '''
          
          </script>
     </head>
-'''
+"""
 
-#The main page layout and title  bar
-main_page_content='''
-<body>
-    <div class="container">
-        <div class="head">
-            <p class="title-page">Learn Programming</p>
-            <a>If you want to learn programming you should practice, practice and practice.
-            Here are a list of resources that can help you in this journey.</a>
+# The main page layout and title bar.
+main_page_content = """
+    <body>
+        <div class="container">
+            <div class="head">
+                <p class="title-page">Learn Programming</p>
+                <a>If you want to learn programming you should practice, practice and practice.
+                Here are a list of resources that can help you in this journey.</a>
+            </div>
+            <div class="resources">
+                {resource_row}
+            </div>
         </div>
-        <div class="resources">
-            {resource_row}
-        </div>
-    </div>
-</body>
-</html>
-'''
-# A single resource entry html template
-resource_row = '''
+    </body>
+    </html>
+"""
+
+# A single resource entry html template.
+resource_row = """
     <div class="one-resource">
         <div class="left-row">
             <ul class="resource-row">
@@ -112,33 +112,32 @@ resource_row = '''
             </ul>
         </div>
     </div>
-    '''
-
+"""
 
 def create_resources_content(resources):
-	# The HTML content for this section of the page
-    content=''
+	# The HTML content for this section of the page.
+    content = ''
     for resource in resources:
-	# Append the title for the resource with its content filled in
-        content                 += resource_row.format(
-        resource_title          = resource.name,
-        resource_information    = resource.description,
-        resource_type           = resource.style,
-        resource_technologies   = resource.technologies,
-        resource_language       = resource.language,
-        resource_url            = resource.url
+	# Append the title for the resource with its content filled in.
+        content += resource_row.format(
+            resource_title = resource.name,
+            resource_information = resource.description,
+            resource_type = resource.style,
+            resource_technologies = resource.technologies,
+            resource_language = resource.language,
+            resource_url = resource.url
         )
     return content
     
 
 def open_resources_page(resources):
-	# Create or overwrite the output file
-    output_file = open('learn_programming.html','w')
+	# Create or overwrite the output file.
+    output_file = open('learn_programming.html', 'w')
 
-	# Replace the resource titles place holder generated content
+	# Replace the resource titles place holder generated content.
     rendered_content = main_page_content.format(
         resource_row = create_resources_content(resources))
 
-	# Output the file
+	# Output the file.
     output_file.write(main_page_head + rendered_content)
     output_file.close()
